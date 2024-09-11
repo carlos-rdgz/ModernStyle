@@ -1,19 +1,22 @@
 {
-  "name": "mi-1ra-pagina",
+  "name": "mi-proyecto",
   "version": "1.0.0",
-  "description": "Esta es mi primera pagina web que trata de mockups, moda, edicion de videos, etc...",
-  "main": "server.js",  // Cambia esto si tu archivo principal tiene otro nombre
+  "description": "Una breve descripción de mi proyecto",
+  "main": "index.html",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js" // Solo si usas nodemon para desarrollo
+      "start": "node index.html",
+      "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "express": "^4.17.1",
-    "nodemailer": "^6.6.3"
-  },
-  "engines": {
-    "node": ">=14.0.0"
-  },
+  "keywords": [
+      "proyecto",
+      "ejemplo"
+  ],
   "author": "Carlos Rodriguez",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+      "express": "^4.17.1"
+  },
+  "devDependencies": {
+      "nodemon": "^2.0.15"
+  }
 }
