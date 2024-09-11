@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Moda Futurista</title>
+        <link rel="stylesheet" href="styles.css">
+        <script defer src="scripts.js"></script> <!-- Verifica que este enlace sea correcto -->
+    </head>
+    
+</head>
+<body class="fade-in">
+    <header>
+        <h1>Moda Futurista</h1>
+        <nav>
+            <ul>
+                <li><a href="#history">Historia</a></li>
+                <li><a href="#gallery">Galería</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#downloads">Descargas</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+        <button id="themeToggle">Cambiar a Tema Claro</button>
+    </header>
+
+    <main>
+        <section id="history" class="fade-in">
+            <h2>Historia de la Moda en República Dominicana</h2>
+            <p>La moda en la República Dominicana ha experimentado un crecimiento significativo en las últimas décadas, fusionando influencias caribeñas con tendencias globales. Diseñadores dominicanos han destacado por su creatividad e innovación.</p>
+        </section>
+        
+
+        <!-- Galería de Imágenes -->
+        <section id="gallery">
+            <h2>Galería de Moda</h2>
+            <div class="gallery">
+                <img src="images/moda1.jpg" alt="Moda 1">
+                <img src="images/moda2.jpg" alt="Moda 2">
+                <img src="images/moda3.jpg" alt="Moda 3">
+            </div>
+        </section>
+
+        <!-- Videos de Instagram -->
+        <section id="videos">
+            <h2>Videos Recientes de Instagram</h2>
+            <div class="videos">
+                <video src="videos/video1.mp4" controls></video>
+                <video src="videos/video2.mp4" controls></video>
+            </div>
+            <a href="https://instagram.com/fede.rdgz" target="_blank">Ver más en Instagram</a>
+        </section>
+
+        <!-- Descargas -->
+        <section id="downloads">
+            <h2>Descargas</h2>
+            <div class="downloads">
+                <h3>Archivo 1</h3>
+                <p>Descripción breve del archivo 1.</p>
+                <a href="descarga1.zip" download>Descargar</a>
+            </div>
+            <div class="downloads">
+                <h3>Archivo 2</h3>
+                <p>Descripción breve del archivo 2.</p>
+                <a href="descarga2.zip" download>Descargar</a>
+            </div>
+            <!-- Puedes añadir más cuadros de descarga de la misma forma -->
+        </section>
+        
+        </section>
+
+        <form action="https://formspree.io/f/xeojweab" method="POST" class="contact-form">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required placeholder="Tu nombre">
+            
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required placeholder="Tu correo electrónico">
+            
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required placeholder="Tu mensaje"></textarea>
+            
+            <button type="submit">Enviar mensaje</button>
+        </form>
+        
+        
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Moda Futurista. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+
+<style>
+    .fade-in {
+    opacity: 0; /* Inicia con opacidad 0 (invisible) */
+    animation: fadeIn 2s ease-in-out forwards; /* Animación de desvanecimiento */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Tema claro */
+body.light-theme {
+    background-color: #f5f5f5;
+    color: #333333;
+}
+
+/* Encabezado */
+header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+
+header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 36px;
+    letter-spacing: 2px;
+    color: #00FFFF;
+    margin: 0;
+}
+
+header.light-theme h1 {
+    color: #007BFF;
+}
+
+/* Navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    font-family: 'Orbitron', sans-serif;
+    color: #00FFFF;
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid #00FFFF;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #00FFFF;
+    color: #121212;
+    border-color: #007BFF;
+}
+
+body.light-theme nav ul li a {
+    color: #007BFF;
+    border-color: #007BFF;
+}
+
+body.light-theme nav ul li a:hover {
+    background-color: #007BFF;
+    color: #ffffff;
+}
+
+/* Botón de cambio de tema */
+#themeToggle {
+    background-color: #00FFFF;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#themeToggle:hover {
+    background-color: #007BFF;
+    color: #ffffff;
+}
+
+body.light-theme #themeToggle {
+    background-color: #007BFF;
+    color: #ffffff;
+}
+
+body.light-theme #themeToggle:hover {
+    background-color: #00FFFF;
+    color: #121212;
+}
+
+/* Sección de historia */
+#history {
+    padding: 50px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    max-width: 1000px;
+    margin: 20px auto;
+    text-align: justify;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#history h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #00FFFF;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+body.light-theme #history {
+    background-color: #ffffff;
+}
+
+body.light-theme #history h2 {
+    color: #007BFF;
+}
+
+/* Galería */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 50px;
+}
+
+.gallery img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.6);
+}
+
+body.light-theme .gallery img {
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+body.light-theme .gallery img:hover {
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.6);
+}
+
+/* Videos */
+#videos {
+    padding: 50px;
+    text-align: center;
+}
+
+#videos video {
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#videos video:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.6);
+}
+
+body.light-theme #videos video {
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+body.light-theme #videos video:hover {
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.6);
+}
+
+/* Cuadros de descarga */
+.downloads {
+    display: inline-block; /* Asegura que estén uno al lado del otro */
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+    margin: 15px; /* Añade margen alrededor de cada cuadro */
+    border-radius: 10px;
+    width: 200px; /* Ajusta según el tamaño que quieras para los cuadros */
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.downloads:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 255, 255, 0.6);
+}
+
+
+#downloads ul li a {
+    font-family: 'Orbitron', sans-serif;
+    color: #00FFFF;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #00FFFF;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+#downloads ul li a:hover {
+    background-color: #00FFFF;
+    color: #121212;
+    border-color: #007BFF;
+}
+
+body.light-theme #downloads ul li a {
+    color: #007BFF;
+    border-color: #007BFF;
+}
+
+body.light-theme #downloads ul li a:hover {
+    background-color: #007BFF;
+    color: #ffffff;
+}
+
+/* Estilo para el formulario de contacto */
+.contact-form {
+    background-color: #121212; /* Fondo del formulario */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra del formulario */
+    max-width: 600px; /* Ancho máximo */
+    margin: 20px auto; /* Centrando el formulario */
+}
+
+/* Estilo para los campos de entrada */
+.contact-form input,
+.contact-form textarea {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 15px; /* Espacio entre campos */
+    border: 1px solid #ddd; /* Borde de los campos */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de la fuente */
+}
+
+/* Estilo para el botón de envío */
+.contact-form button {
+    background-color: #00FFFF; /* Color de fondo */
+    color: #121212; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 18px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición de color */
+}
+
+.contact-form button:hover {
+    background-color: #007BFF; /* Color de fondo al pasar el cursor */
+    color: #ffffff; /* Color del texto al pasar el cursor */
+}
+
+/* Tema claro */
+body.light-theme .contact-form {
+    background-color: #f4f4f4; /* Fondo del formulario en tema claro */
+    color: #121212; /* Color del texto en tema claro */
+}
+
+body.light-theme .contact-form input,
+body.light-theme .contact-form textarea {
+    border: 1px solid #ddd; /* Borde de los campos en tema claro */
+    background-color: #ffffff; /* Fondo de los campos en tema claro */
+}
+
+body.light-theme .contact-form button {
+    background-color: #00FFFF; /* Fondo del botón en tema claro */
+    color: #121212; /* Color del texto del botón en tema claro */
+}
+
+/* Tema oscuro */
+body.dark-theme .contact-form {
+    background-color: #121212; /* Fondo del formulario en tema oscuro */
+    color: #ffffff; /* Color del texto en tema oscuro */
+}
+
+body.dark-theme .contact-form input,
+body.dark-theme .contact-form textarea {
+    border: 1px solid #333; /* Borde de los campos en tema oscuro */
+    background-color: #333; /* Fondo de los campos en tema oscuro */
+}
+
+body.dark-theme .contact-form button {
+    background-color: #007BFF; /* Fondo del botón en tema oscuro */
+    color: #ffffff; /* Color del texto del botón en tema oscuro */
+}
+
+
+</style>
+<script>
+const themeToggleBtn = document.getElementById('themeToggle');
+const bodyElement = document.body;
+
+themeToggleBtn.addEventListener('click', () => {
+    bodyElement.classList.toggle('dark-theme');
+    bodyElement.classList.toggle('light-theme');
+
+    // Cambiar el texto del botón según el tema activo
+    if (bodyElement.classList.contains('light-theme')) {
+        themeToggleBtn.textContent = 'Cambiar a Tema Oscuro';
+    } else {
+        themeToggleBtn.textContent = 'Cambiar a Tema Claro';
+    }
+});
+
+// Agregar animaciones de entrada cuando los elementos aparecen al hacer scroll
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+        }
+    });
+});
+
+const elementsToAnimate = document.querySelectorAll('.fade-in');
+elementsToAnimate.forEach(el => observer.observe(el));
+
+
+</script>

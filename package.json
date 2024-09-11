@@ -1,0 +1,19 @@
+{
+  "name": "mi-1ra-pagina",
+  "version": "1.0.0",
+  "description": "Esta es mi primera pagina web que trata de mockups, moda, edicion de videos, etc...",
+  "main": "server.js",  // Cambia esto si tu archivo principal tiene otro nombre
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js" // Solo si usas nodemon para desarrollo
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemailer": "^6.6.3"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "author": "Carlos Rodriguez",
+  "license": "ISC"
+}
